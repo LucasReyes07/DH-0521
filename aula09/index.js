@@ -1,24 +1,35 @@
-const express = require('express');
-const app = express();
-app.use(express.json())
-const usuarios = []
-app.get('/usuario', (req, res) => {
-    return res.send(usuarios)
+// Criar uma instancia do express
+const app = express()
+app.get('/', (req,res) => {
+  res.send('Você está na home')
 })
-app.post('/usuario', (req, res) => {
-    const usario = req.body
-    usuarios.push(usario)
-    return res.json(usuarios)
+app.get('/cumprimentar', (req,res) => {
+  res.send('Olá')
 })
-app.delete('/usuario/:nome', (req, res) => {
-    const nomeUsuario = req.params
-    const usuarioIndex = usuarios.findIndex(usuario => usuario.nome == nomeUsuario.nome);
-    if (usuarioIndex < 0) {
-        return res.status(400).json({ error: 'Usuário não encontrado.' });
-    }
-    usuarios.splice(usuarioIndex, 1);
-    return res.status(200).json(usuarios);
+// Desafio - Criar uma rota parametrizada, que irá se chamar /cumprimentar 
+// e terá um parâmetro que será um nome, logo, ele terá que receber esse parâmetro
+// que foi informado e exibir uma mensagem de cumprimento "Olá, nome".
+app.get('/cumprimentar/:nome', (req,res) => {
+  const nome = req.params.nome
+  res.send('Olá, ' + nome)
 })
-app.listen(3000, (req, res) => {
-    console.log("Servidor Online")
+// Desafio - Criar uma rota parametrizada, que irá se chamar /calcular 
+// e terá dois parâmetros que serão números, caso, receba apenas o primeiro parâmetro, 
+// deverá retornar ele, ou, caso recebe os dois parâmetros terá que somar os dois e retornar
+// o resultado.
+
+// se receber 1º retorná-lo, senão, caso receba os dois parâmetros efetuar a soma
+app.get('/calcular/:numero1/:numero2?', (req, res) => {
+  let { numero1, numero2 } = req.params
+
+  if(numero2){
+    let resultado = parseInt(numero1) + parseInt(numero2)
+    res.send('O resultado da soma é: ' + resultado)
+  } else {
+    res.send(numero1)
+  }
 })
+
+// Utilizarem o método listen para que com um console.log
+// consigam exibir a mensagem: Servidor rodando na porta 3000
+app.listen(3000, () => {})
