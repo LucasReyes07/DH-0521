@@ -1,0 +1,22 @@
+/*header*/
+
+/* altura de 10%
+    largura de 100%
+    cot de fundo #ffb90f
+    margem ao topo de 70px;*/
+header {
+height: 10%;
+width: 100%;
+background-color: #ffb90f;
+margin-top: 70px;
+
+}
+/* Referenciando uma classe
+.img-200*/
+
+/* Referenciando um Id
+#img-200
+*/
+header > nav > img{
+    width: 200px;
+}
