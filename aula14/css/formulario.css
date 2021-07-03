@@ -1,0 +1,135 @@
+html, body {
+    height: 100%;
+}
+
+
+header {
+height: 15%;
+width: 100%;
+background-color: #ffb90f;
+margin-top: 70px;
+}
+
+header nav img {
+    width: 100px;
+    /*position: absolute;
+    top: -65px;*/
+}
+
+body {
+    background-color: white;
+    
+}
+
+#título {
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+}
+
+#subtítulo {
+    font-size: 1em;
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    margin-right: 30%;
+    margin-left: 30%;
+    
+}
+section {
+    display: flex;
+    justify-content: space-between;
+    
+
+}
+
+.item1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.item2 {
+    display: flex;
+    flex-direction: column;
+}
+
+#nome {
+    width: 200px;
+    
+}
+
+#email {
+    width: 200px;
+    
+}
+
+.formMsg {
+   display: flex;
+  
+
+}
+
+.msg {
+    margin-top: 30px;
+}
+
+#mensagem {
+    width: 220%;
+    height: 200px;
+}
+
+.termos {
+    display: flex;
+    margin-top: 20px;
+}
+
+.botao {
+    margin-top: 20px;
+}
+
+.termoeradio {
+    display: flex;
+    align-items: center;
+
+}
+/*.formImput {
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}*/
+
+
+
+/*.infos {
+    display:flex;
+    flex-direction: column;*/
+
+/*.infos imput[type="text"], .infos imput[type="email"], .infos select, .infos textarea {
+    padding: 0,2em;
+    display: block;*/
+
+
+
+form div label button {
+    width: 75px;
+    background-color: #ffb90f;
+    color: black;
+    height: 25px;
+    position: relative;
+    bottom: 10px; 
+    border-radius: 5px 5px 5px 5px;
+}
+
+
+/*.form-input-container {
+    display: flex;
+  }
+  .form-input {
+    display: flex;
+    flex-direction: column;
+  }*/
+
+
